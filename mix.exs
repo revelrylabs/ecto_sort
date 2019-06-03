@@ -13,7 +13,8 @@ defmodule Ecto.Sort.MixProject do
       name: "Ecto Sort",
       source_url: "https://github.com/revelrylabs/ecto_sort",
       homepage_url: "https://github.com/revelrylabs/ecto_sort",
-      docs: [main: "readme", extras: ["README.md"]]
+      docs: [main: "readme", extras: ["README.md"]],
+      test_coverage: [tool: ExCoveralls]
     ]
   end
 
@@ -33,7 +34,9 @@ defmodule Ecto.Sort.MixProject do
     [
       {:ecto_sql, "~> 3.1.1", only: [:test]},
       {:ex_doc, ">= 0.0.0", only: [:dev, :test]},
-      {:mix_test_watch, "~> 0.8", only: [:dev, :test], runtime: false}
+      {:mix_test_watch, "~> 0.8", only: [:dev, :test], runtime: false},
+      {:excoveralls, "~> 0.10", only: [:test]},
+      {:credo, ">= 0.5.1", only: [:dev, :test]}
     ]
   end
 
@@ -43,7 +46,7 @@ defmodule Ecto.Sort.MixProject do
       maintainers: ["Revelry Labs"],
       licenses: ["MIT"],
       links: %{
-        "GitHub" => "https://github.com/revelrylabs/ecto_sort"
+        github: "https://github.com/revelrylabs/ecto_sort"
       },
       build_tools: ["mix"]
     ]
