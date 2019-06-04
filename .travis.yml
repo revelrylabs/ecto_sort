@@ -12,9 +12,12 @@ install:
   - mix local.hex --force
   - mix local.rebar --force
   - mix deps.get
+before_script:
+  - gem install coveralls-multi --no-document
 script:
   - mix test --exclude pending --trace
   - MIX_ENV=test mix coveralls.json
+  - coveralls-multi
   - mix credo --strict
   - mix format --check-formatted
 before_deploy:
