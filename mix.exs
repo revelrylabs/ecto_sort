@@ -32,7 +32,7 @@ defmodule Ecto.Sort.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ecto_sql, "~> 3.2.0", only: [:test]},
+      {:ecto_sql, "~> 3.4.0", only: [:test]},
       {:ex_doc, ">= 0.0.0", only: [:dev, :test]},
       {:mix_test_watch, "~> 0.8", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.10", only: [:test]},
